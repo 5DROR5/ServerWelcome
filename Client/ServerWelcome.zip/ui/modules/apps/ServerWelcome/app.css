@@ -1,0 +1,111 @@
+.sw-overlay {
+  display: none;
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 99998;
+  background: rgba(0, 0, 0, 0.65);
+}
+.sw-overlay.sw-visible { display: block; }
+
+.sw-modal {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 420px;
+  background: #1a1a2e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: "Segoe UI", Roboto, sans-serif;
+}
+.sw-modal.sw-visible { display: block; }
+
+.sw-body {
+  padding: 36px 32px 28px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+
+.sw-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.sw-subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: #95a5a6;
+  line-height: 1.5;
+}
+
+.sw-buttons {
+  display: -webkit-flex;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.sw-btn {
+  -webkit-flex: 1;
+  flex: 1;
+  padding: 11px 16px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #ffffff;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.sw-btn-discord {
+  background-color: #1a4fc4;
+  border-color: #1a4fc4;
+}
+.sw-btn-discord:hover {
+  background-color: #2560e0;
+  transform: translateY(-2px);
+}
+
+.sw-btn-close {
+  background-color: #2a2a3e;
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #a0a0b0;
+}
+.sw-btn-close:hover {
+  background-color: #3a3a4e;
+  color: #ffffff;
+}
+
+.sw-x {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  line-height: 28px;
+  text-align: center;
+  padding: 0;
+}
+.sw-x:hover { background: rgba(255, 255, 255, 0.2); }
