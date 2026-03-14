@@ -1,0 +1,19 @@
+{
+  "domElement": "<server-welcome></server-welcome>",
+  "name": "Server Welcome",
+  "types": ["ui.apps.categories.info"],
+  "css": {
+    "bottom": "",
+    "height": "40px",
+    "left": 0,
+    "margin": "auto",
+    "position": "absolute",
+    "right": 0,
+    "top": "40px",
+    "width": "200px"
+  },
+  "description": "Shows a welcome popup with a Discord link when joining the server.",
+  "author": "5DROR5",
+  "version": "1.0",
+  "directive": "serverWelcome"
+}
