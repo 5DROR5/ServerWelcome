@@ -6,10 +6,6 @@
 // TODO: Replace with your own Discord invite link
 var DISCORD_URL = 'https://discord.gg/XXXXXXX';
 
-// BeamNG requires external URLs to pass through its proxy.
-var BNG_PROXY = 'https://www.beamng.com/proxy.php?link=';
-
-
 angular.module('beamng.apps')
 .directive('serverWelcome', ['$timeout', function($timeout) {
   return {
@@ -79,8 +75,7 @@ angular.module('beamng.apps')
 
       discordBtn.addEventListener('click', function() {
         try {
-          bngApi.engineLua('openWebBrowser("' + BNG_PROXY + DISCORD_URL + '")');
-          bngApi.engineLua("Engine.Audio.playOnce('AudioGui','event:>UI>Main>Click_Tonal_01')");
+          bngApi.engineLua('MPCoreNetwork.openURL("' + DISCORD_URL + '")');
         } catch(e) {
           console.error('[ServerWelcome] error:', e);
         }
